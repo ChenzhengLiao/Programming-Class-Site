@@ -1,11 +1,12 @@
  body{
                 font-family: sans-serif;
+                margin: 0px;
             }
-            .container{
-                margin:0px;
-                background-color: beige;
-                padding:20px;
-                text-align: center;
+.container{
+ margin:0px;
+ background-color: beige;
+ padding:20px;
+ text-align: center;
             }
             
 /* Add a black background color to the top navigation */
