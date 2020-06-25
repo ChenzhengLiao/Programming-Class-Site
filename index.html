@@ -4,15 +4,19 @@
         <title>Home</title>
         
       <link rel="stylesheet" href="mystyles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
     </head>
         
     <body>
         
      <div class="topnav">
+         
           <a  class="active" href="index.html">Home</a>
           <a  href="contact.html">Contact</a>
           <a href="about.html">About</a>
+          <button class="inputbox" onclick="myfunction()"><i class="fa fa-search"></i></button>
+          <input class="inputbox" id="myinput">
     </div>
     
     <div class="container">       
@@ -22,7 +26,31 @@
         <img src='Pikachu%20GIF.gif' style="width: 550px; padding: 20px">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/1roy4o4tqQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+
+
         
     </body>
+
+    <script> 
+        alert("hi this is a popup");
+
+
+        function myfunction() {
+            
+            data = [{pokemon:"bulbasur",type:"grass"},{pokemon: "pikachu",type:"electric"},{pokemon:"charmander",type:"fire"}];
+            
+            myinput = document.getElementById("myinput");
+            
+            for (i=0;i<3;i++) {
+                if (data[i]['pokemon'] == myinput.value.toLowerCase()) {
+                    alert(data[i]['type']);
+                    break;
+                }
+            }
+            
+            myinput.value = "";
+        }
+
+    </script>
     
 </html>
